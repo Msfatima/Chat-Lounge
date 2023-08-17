@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<br />
+<br />
+<div class="text-center border-bottom">
+    <h1 class="display-4 fw-bold">Welcome to Chat Loung Web App</h1>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+</div>
+
+<br />
+
+
+<div class="row">
+    <div class="column">
+    <br /> <br />
+        <div class="col-1">Name</div>
+        <div class="col-6"><input type="text" style="border: 2px solid #dedede;" id="userInput" /></div>
+
+        <div class="col-1">Message</div>
+        <div class="col-10">
+            <textarea type="text" rows="4" class="w-100" id="messageInput" style="border: 2px solid #dedede;"></textarea>
+        </div>  
+        <br />
+        <div class="col-6 text-end">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="column">
+    
+        <div class="col-10">
+    <div class="chat">
+        <img src="img/Chat-Icon.png" alt="Avatar">
+        <!--id="messagesList" for displaying messages that are received from the SignalR hub.-->
+        <ul id="messagesList"></ul>
+        <span class="time-right">@DateTime.Now</span>
+             </div>
+        </div>  
+    </div>
+
+
+</div><!--End of the Row-->
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>

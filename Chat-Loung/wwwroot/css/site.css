@@ -1,0 +1,86 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 80px;
+    height:500px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Chat containers */
+.chat {
+    border: 2px solid #dedede;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    height:300px
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.chat::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.chat img {
+    float: left;
+    max-width: 60px;
+    width: 40%;
+    margin-right: 20px;
+    border-radius: 1%;
+    
+}
+
+    /* Style the right image */
+    .chat img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
